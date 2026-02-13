@@ -1,7 +1,5 @@
 package oop_00000130562_MuhammadFaathinNaufal.week02
 
-package oop_00000130562_MuhammadFaathinNaufal.week02
-
 class Student (
     val name: String,
     val nim: String,
@@ -15,5 +13,8 @@ class Student (
         }else{
             println("LOG: Objek student $name berhasil dialokasikan di memory.")
         }
+    } constructor(name: String, nim: String) : this(name, nim, major = "non matriculated") {
+        println("LOG: using constructor jalur umum (tanpa jurusan). ")
+
     }
 }
