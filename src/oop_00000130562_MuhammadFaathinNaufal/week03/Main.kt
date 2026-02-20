@@ -11,4 +11,18 @@ fun main() {
 //
     println("Pajak yang harus dibayar: ${e.tax}")
 //
+
+//yang weapon
+    val pedang = Weapon("Pedang Excalibur")
+
+    println("Set damage ke -50...")
+    pedang.damage = -50
+
+
+    println("Set damage ke 9999...")
+    pedang.damage = 9999
+
+    // Print Tier-nya
+    println("Senjata: ${pedang.name}")
+    println("Tier: ${pedang.tier}")
 }
