@@ -25,4 +25,13 @@ fun main() {
     // Print Tier-nya
     println("Senjata: ${pedang.name}")
     println("Tier: ${pedang.tier}")
+//yang ini playerr
+    val player1 = Player("GamerJagoan")
+    println("Menambahkan 50 XP...")
+    player1.addXp(50)
+    println("Level saat ini: ${player1.level}")
+
+    println("\nMenambahkan 60 XP...")
+    player1.addXp(60)
+    println("Level saat ini: ${player1.level}")
 }
