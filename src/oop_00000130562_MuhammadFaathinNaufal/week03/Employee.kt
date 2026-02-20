@@ -1,5 +1,11 @@
 package oop_00000130562_MuhammadFaathinNaufal.week03
 
 class Employee(val name: String){
-    var salary: Int = 0)
+    var salary: Int = 0
+            set(value) {
+                println("Salary $value")
+                this.salary = value
+
+
+    }
 }
