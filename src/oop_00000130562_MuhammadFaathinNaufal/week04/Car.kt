@@ -17,3 +17,4 @@ open class Car(brand: String, val numberOfDoors: Int) : Vehicle(brand) { // [cit
 }
 
 //ORklakson
+//implement super keyword nya
