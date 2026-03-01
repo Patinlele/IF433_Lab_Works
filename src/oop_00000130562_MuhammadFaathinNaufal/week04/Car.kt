@@ -15,3 +15,5 @@ open class Car(brand: String, val numberOfDoors: Int) : Vehicle(brand) { // [cit
         println("Mobil $brand menggunakan transmisi gigi untuk menambah kecepatan.") // [cite: 55]
     }
 }
+
+//ORklakson
