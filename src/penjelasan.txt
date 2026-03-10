@@ -1,0 +1,8 @@
+Week 5:
+Overloading (Tugas 1): Kita membuat metode dengan nama yang persis sama (hitungLuas) namun Kotlin tahu metode mana yang harus dijalankan berdasarkan tipe data atau jumlah parameter yang kita masukkan saat memanggilnya. Ini disebut Compile-Time Polymorphism.
+
+Abstract Class (Tugas 2): PaymentMethod bersifat abstrak karena fungsinya hanya sebagai blueprint atau kerangka. Class ini tidak bisa dibuat wujud objeknya secara langsung, melainkan harus di-wariskan ke EWallet dan CreditCard.
+
+Overriding (Tugas 2): Fungsi processPayment() yang abstrak dipaksa untuk dibuat wujud aslinya (di-override) di masing-masing class anak, dengan aturan logika mereka sendiri (saldo untuk e-wallet, limit untuk kartu kredit).
+
+Smart Casting (Tugas 2): Di dalam looping for, variabel method aslinya bertipe general yaitu PaymentMethod. Namun menggunakan kata kunci is, Kotlin akan otomatis mengubah bentuk sementara variabel tersebut menjadi EWallet jika memang terdeteksi sebagai EWallet. Dengan begitu, kita bisa mengakses fungsi khusus topUp() milik EWallet tanpa takut error.
