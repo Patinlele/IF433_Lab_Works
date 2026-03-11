@@ -1,7 +1,5 @@
 package oop_00000130562_MuhammadFaathinNaufal.week04
 
-package oop_nim_nama.week04
-
 fun main() {
     println("--- Testing Vehicle ---")
     val generalVehicle = Vehicle(brand = "Sepeda Onthel")
