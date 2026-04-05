@@ -6,7 +6,7 @@ fun processCheckout(method: PaymentMethod, amount: Double) {
 }
 
 fun main() {
-    // Testing Guided
+
     val myWatch = Smartwatch()
     myWatch.showTime()
     val myPhone = Smartphone()
@@ -19,4 +19,16 @@ fun main() {
     processCheckout(pay2, 150000.0)
 
 
+    val lamp = SmartLamp("L01", "Ruang Tamu")
+    val speaker = SmartSpeaker("S01", "Google Nest Dapur")
+    val cctv = SmartCCTV("C01", "Ezviz Garasi")
+
+    val hub = SmartHomeHub()
+    hub.addDevice(lamp)
+    hub.addDevice(speaker)
+    hub.addDevice(cctv)
+
+    println("\n=== TESTING SMART HOME HUB ===")
+    hub.activateSecurityMode()
+    hub.turnOffAllSwitches()
 }
