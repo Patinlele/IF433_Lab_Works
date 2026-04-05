@@ -56,4 +56,3 @@ fun main() {
     processEvent(BattleState.LootDropped(upgradedItem))
     processEvent(BattleState.GameOver("Terkena jebakan racun"))
 }
-}
