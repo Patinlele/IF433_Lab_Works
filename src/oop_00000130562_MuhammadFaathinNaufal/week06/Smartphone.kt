@@ -7,3 +7,4 @@ class Smartphone : Camera, Phone {
         println("Sistem operasi Smartphone berhasil booting.")
     }
 }
+//bener
