@@ -1,6 +1,5 @@
 package oop_00000130562_MuhammadFaathinNaufal.week07
 
-
 fun main() {
     println("=== TEST SINGLETON ===")
     println("Status: ${DatabaseManager.connectionStatus}")
