@@ -16,4 +16,13 @@ fun main(){
     } ?: "transaksi invalid: harga not set"
     println(receipt)
 
+    println("\n=== tes safe casting ===")
+    val mixedData: List<Any> = listOf(
+        "Smartphone",
+        1500000,
+        UserProfile("Andi", null),
+        "Laptop",
+        4500000.0
+    )
+
 }
