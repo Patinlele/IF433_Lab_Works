@@ -7,4 +7,13 @@ fun main(){
     val destination = emptyOrder.deliveryDetails?.address?.city?.name ?: "kota tidak diketahui"
     println("Tujuan pengiriman: $destination")
 
+    println("\n=== tes let block ====")
+    val validOrder = Order(null, 250000)
+
+    val receipt = validOrder.totalPrice?.let { price ->
+        val tax = price * 0.11
+        "transaksi valid. harga: RP$price, Pajak: Rp$tax"
+    } ?: "transaksi invalid: harga not set"
+    println(receipt)
+
 }
