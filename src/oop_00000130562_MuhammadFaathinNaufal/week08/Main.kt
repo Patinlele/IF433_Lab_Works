@@ -55,6 +55,12 @@ fun main(){
         println(e.message)
     }
 
+    println("\n=== tes java interop ===")
+    val javaResponse = LegacyJavaAPI.fetchServerStatus()
+
+    val statusLength = javaResponse!!.length
+    println("Status dari java: $javaResponse (Length: $statusLength )")
+
 
 
 }
