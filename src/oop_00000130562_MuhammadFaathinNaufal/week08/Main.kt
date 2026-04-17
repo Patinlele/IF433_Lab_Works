@@ -31,4 +31,9 @@ fun main(){
             println("Ditemukan text: ${it.uppercase()}")
         }
     }
+
+    val someObject: Any = 100
+    val safeString = someObject as? String ?: "Unknown String"
+    println("Hasil cast + fallback: $safeString")
+
 }
