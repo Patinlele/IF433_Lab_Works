@@ -1,25 +1,29 @@
 package oop_00000130562_MuhammadFaathinNaufal.week03
 
-class Employee(val name: String){
+class Employee(val name: String) {
     var salary: Int = 0
-            set(value) {
-                if (value < 0){
-                    println("ERR: gaji ga boleh negatif!, Di set ke 0")
-                    field = 0
-                }
-                else{
-                    field = value
-                }
+        set(value) {
+            if (value < 0) {
+                println("ERR: gaji ga boleh negatif!, Di set ke 0")
+                field = 0
+            } else {
+                field = value
+            }
+        }
+
+    // ADD THIS PART:
+    // This calculates 10% of the salary automatically
+    val tax: Double
+        get() = salary * 0.1
+
+    private var performanceRating: Int = 3
+
+    fun increasePerformance() {
+        performanceRating++
+        println("Kinerja $name meningkat! Rating: $performanceRating")
     }
-}
 
-private var performanceRating: Int = 3
-
-fun inceasePerformance() {
-    performanceRating++
-    println("Kinerja $name meningkat! Rating: $performanceRating")
-}
-
-fun printStatus(){
-    println("karyawan: $name, Rating: $performanceRating")
+    fun printStatus() {
+        println("Karyawan: $name, Rating: $performanceRating")
+    }
 }
