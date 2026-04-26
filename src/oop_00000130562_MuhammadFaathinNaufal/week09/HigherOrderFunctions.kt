@@ -19,6 +19,6 @@ class HigherOrderFunctions {
         val randomNames = listOf("Charlie", "Alice", "Bob")
         val sortedReverse = randomNames.sortedByDescending { it }
         sortedReverse.forEach { name ->
-            println("User: $name")
+            println("User: $name") }
     }
 }
