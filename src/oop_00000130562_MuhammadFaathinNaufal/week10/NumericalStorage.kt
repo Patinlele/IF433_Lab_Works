@@ -6,6 +6,6 @@ class MathBox<T : Number>(val value: T, val value2: T) {
     }
 }
 
-fun <T> gertMax(a: T, b: T): T where T : Comaparable<T> {
+fun <T> gertMax(a: T, b: T): T where T : Comparable<T> {
     return if (a > b) a else b
 }
