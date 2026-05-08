@@ -5,3 +5,7 @@ class MathBox<T : Number>(val value: T, val value2: T) {
         return value .toDouble() + value2.toDouble()
     }
 }
+
+fun <T> gertMax(a: T, b: T): T where T : Comaparable<T> {
+    return if (a > b) a else b
+}
