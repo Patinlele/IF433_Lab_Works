@@ -15,3 +15,6 @@ class UserManager {
         println("Sending email to: ${user.email}")
     }
 }
+
+
+
