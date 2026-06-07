@@ -52,3 +52,33 @@ class SafeOrderProcessor(
     }
 }
 
+interface PricingStrategy {
+    fun calculate(price: Double): Double
+}
+
+class RegularPricing : PricingStrategy {
+    override fun calculate(price: Double): Double = price
+}
+
+class VipPricing : PricingStrategy {
+    override fun calculate(price: Double): Double = price * 0.90
+}
+
+fun main() {
+    println("=== TESTING SOLID E-COMMERCE SYSTEM ===")
+    val csvRepo = CsvOrderRepository()
+    val emailService = EmailNotifier()
+
+    // Test memproses order untuk pelanggan VIP menggunakan strategi VIP
+    val vipProcessor = SafeOrderProcessor(csvRepo, emailService, VipPricing())
+    vipProcessor.processOrder("Laptop Gaming", 15000000.0, "VIP")
+
+    println()
+
+    // Test memproses order untuk pelanggan Regular menggunakan strategi Regular
+    val regularProcessor = SafeOrderProcessor(csvRepo, emailService, RegularPricing())
+    regularProcessor.processOrder("Mouse Wireless", 300000.0, "REGULAR")
+}
+
+
+
