@@ -30,4 +30,8 @@ fun main() {
     } finally {
         println("Siklus pengecekan dispenser pagi selesai.")
     }
+    println("\n=== JADWAL MAKAN 2: SORE ===")
+    val result = runCatching {
+        dispenseKibble(30, 1000, false)
+    }
 }
