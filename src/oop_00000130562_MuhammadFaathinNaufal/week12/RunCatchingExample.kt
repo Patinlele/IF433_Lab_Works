@@ -13,4 +13,13 @@ fun main() {
     // Pattern: recover
     val recovered = result.recover { 0 }.getOrNull()
     println("Recovered Value: $recovered")
+
+    runCatching {
+        "100".toInt()
+    }.onSuccess { v ->
+        println("Berhasil dikonversi: $v")
+    }.onFailure { e ->
+        println("Gagal konversi: ${e.message}")
+    }
 }
+
