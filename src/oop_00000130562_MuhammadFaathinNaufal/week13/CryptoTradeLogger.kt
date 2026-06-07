@@ -27,14 +27,14 @@ fun saveTrades(trades: List<TradeRecord>, path: String) {
     File(path).printWriter().use { writer ->
         trades.forEach { writer.println(it.toCsv()) }
     }
+}
 
-    fun loadTrades(path: String): List<TradeRecord> {
-        return try {
-            File(path).readLines().mapNotNull { fromCsvTrade(it) }
-        } catch (e: FileNotFoundException) {
-            println("Error: File histori transaksi tidak ditemukan!")
-            emptyList()
-        }
+fun loadTrades(path: String): List<TradeRecord> {
+    return try {
+        File(path).readLines().mapNotNull { fromCsvTrade(it) }
+    } catch (e: FileNotFoundException) {
+        println("Error: File histori transaksi tidak ditemukan!")
+        emptyList()
     }
 }
 
@@ -45,9 +45,12 @@ fun main() {
     )
     saveTrades(mockTrades, "crypto_trades.csv")
     File("crypto_trades.csv").appendText("CORRUPT_ID, DOGEUSDT, Hold, XX ,YY\n")
+
     val loadedData = loadTrades("crypto_trades.csv")
     val totalPnl = loadedData.sumOf { it.pnl }
 
-
+    println("\n=== REKAPITULASI HISTORI TRANSAKSI ===")
+    loadedData.forEach { println(it) }
+    println("==== TOTAL PnL BERSIH: $totalPnl ====")
 }
 
