@@ -22,3 +22,10 @@ fun fromCsvTrade(line: String): TradeRecord? {
         null
     }
 }
+
+fun saveTrades(trades: List<TradeRecord>, path: String) {
+    File(path).printWriter().use { writer ->
+        trades.forEach { writer.println(it.toCsv()) }
+    }
+}
+
